@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('salary');
             $table->text('description');
+            $table->foreignId('employer_id')->constrained('employers')->onDelete('cascade');
             $table->timestamps();
         });
     }
